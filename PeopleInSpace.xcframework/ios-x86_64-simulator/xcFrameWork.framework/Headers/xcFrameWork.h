@@ -412,7 +412,7 @@ __attribute__((swift_name("EcgCharacteristics.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("EcgCharacteristicsCalculator")))
 @interface XFWEcgCharacteristicsCalculator : XFWBase
-- (instancetype)initWithSignal:(NSMutableArray<XFWDouble *> *)signal augmentedLead:(int32_t)augmentedLead applyFilter:(BOOL)applyFilter adjustRPeaks:(BOOL)adjustRPeaks __attribute__((swift_name("init(signal:augmentedLead:applyFilter:adjustRPeaks:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithSignal:(NSArray<XFWDouble *> *)signal augmentedLead:(int32_t)augmentedLead applyFilter:(BOOL)applyFilter adjustRPeaks:(BOOL)adjustRPeaks __attribute__((swift_name("init(signal:augmentedLead:applyFilter:adjustRPeaks:)"))) __attribute__((objc_designated_initializer));
 - (XFWEcgCharacteristics * _Nullable)getCharacteristicsMsDifference:(double)msDifference __attribute__((swift_name("getCharacteristics(msDifference:)")));
 @end;
 
@@ -554,16 +554,16 @@ __attribute__((swift_name("HrvPerMinuteData")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("LeadTwoData")))
 @interface XFWLeadTwoData : XFWEcgData
-- (instancetype)initWithLead2Data:(NSMutableArray<XFWDouble *> *)lead2Data __attribute__((swift_name("init(lead2Data:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithLead2Data:(NSArray<XFWDouble *> *)lead2Data __attribute__((swift_name("init(lead2Data:)"))) __attribute__((objc_designated_initializer));
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
 + (instancetype)new __attribute__((unavailable));
 @property (class, readonly, getter=companion) XFWLeadTwoDataCompanion *companion __attribute__((swift_name("companion")));
-- (NSMutableArray<XFWDouble *> *)component1 __attribute__((swift_name("component1()")));
-- (XFWLeadTwoData *)doCopyLead2Data:(NSMutableArray<XFWDouble *> *)lead2Data __attribute__((swift_name("doCopy(lead2Data:)")));
+- (NSArray<XFWDouble *> *)component1 __attribute__((swift_name("component1()")));
+- (XFWLeadTwoData *)doCopyLead2Data:(NSArray<XFWDouble *> *)lead2Data __attribute__((swift_name("doCopy(lead2Data:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
-@property NSMutableArray<XFWDouble *> *lead2Data __attribute__((swift_name("lead2Data")));
+@property NSArray<XFWDouble *> *lead2Data __attribute__((swift_name("lead2Data")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
@@ -871,7 +871,7 @@ __attribute__((swift_name("Algo2022.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Arrhythmia")))
 @interface XFWArrhythmia : XFWBase
-- (instancetype)initWithEcgCharacteristics:(XFWEcgCharacteristics * _Nullable)ecgCharacteristics signal:(NSMutableArray<XFWDouble *> *)signal isEcgReport:(BOOL)isEcgReport fft:(XFWFFT *)fft __attribute__((swift_name("init(ecgCharacteristics:signal:isEcgReport:fft:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithEcgCharacteristics:(XFWEcgCharacteristics * _Nullable)ecgCharacteristics signal:(NSArray<XFWDouble *> *)signal isEcgReport:(BOOL)isEcgReport fft:(XFWFFT *)fft __attribute__((swift_name("init(ecgCharacteristics:signal:isEcgReport:fft:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) XFWArrhythmiaCompanion *companion __attribute__((swift_name("companion")));
 @property (readonly) NSString *abnormality __attribute__((swift_name("abnormality")));
 @property (readonly) NSString *detection __attribute__((swift_name("detection")));
@@ -1035,11 +1035,11 @@ __attribute__((swift_name("Butterworth")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("ECGProcessing")))
 @interface XFWECGProcessing : XFWBase
-- (instancetype)initWithEcgPoints:(NSMutableArray<XFWDouble *> *)ecgPoints leadPosition:(int32_t)leadPosition applyFilter:(BOOL)applyFilter adjustRPeaks:(BOOL)adjustRPeaks ecgPointsForAugmentedLead:(NSMutableArray<XFWDouble *> * _Nullable)ecgPointsForAugmentedLead __attribute__((swift_name("init(ecgPoints:leadPosition:applyFilter:adjustRPeaks:ecgPointsForAugmentedLead:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithEcgPoints:(NSArray<XFWDouble *> *)ecgPoints leadPosition:(int32_t)leadPosition applyFilter:(BOOL)applyFilter adjustRPeaks:(BOOL)adjustRPeaks ecgPointsForAugmentedLead:(NSMutableArray<XFWDouble *> * _Nullable)ecgPointsForAugmentedLead __attribute__((swift_name("init(ecgPoints:leadPosition:applyFilter:adjustRPeaks:ecgPointsForAugmentedLead:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) XFWECGProcessingCompanion *companion __attribute__((swift_name("companion")));
 - (NSMutableArray<XFWDouble *> *)adjustRPeaksSignalOnConsideration:(NSMutableArray<XFWDouble *> *)signalOnConsideration seudoPoint:(NSMutableArray<XFWDouble *> *)seudoPoint __attribute__((swift_name("adjustRPeaks(signalOnConsideration:seudoPoint:)")));
 - (double)calculateAugmentedSTElevationQrsStop:(NSMutableArray<XFWDouble *> *)qrsStop prStopIndices:(NSMutableArray<XFWDouble *> * _Nullable)prStopIndices augmentedSignalData:(NSMutableArray<XFWDouble *> *)augmentedSignalData __attribute__((swift_name("calculateAugmentedSTElevation(qrsStop:prStopIndices:augmentedSignalData:)")));
-- (NSMutableArray<XFWDouble *> *)calculateRPointsSignal:(NSMutableArray<XFWDouble *> *)signal __attribute__((swift_name("calculateRPoints(signal:)")));
+- (NSMutableArray<XFWDouble *> *)calculateRPointsSignal:(NSArray<XFWDouble *> *)signal __attribute__((swift_name("calculateRPoints(signal:)")));
 - (XFWEcgCharacteristics *)featuresRPeaks:(NSMutableArray<XFWDouble *> *)rPeaks pPointIndices:(NSMutableArray<XFWDouble *> *)pPointIndices qPointIndices:(NSMutableArray<XFWDouble *> *)qPointIndices sPointIndices:(NSMutableArray<XFWDouble *> *)sPointIndices tPointIndices:(NSMutableArray<XFWDouble *> *)tPointIndices __attribute__((swift_name("features(rPeaks:pPointIndices:qPointIndices:sPointIndices:tPointIndices:)")));
 - (NSMutableArray<XFWDouble *> *)maxMinSignal:(NSMutableArray<XFWDouble *> *)signal points:(NSMutableArray<XFWDouble *> *)points key:(int32_t)key __attribute__((swift_name("maxMin(signal:points:key:)")));
 - (void)processRPointsForAug:(NSMutableArray<XFWDouble *> * _Nullable)rPointsForAug sPointsForAug:(NSMutableArray<XFWDouble *> * _Nullable)sPointsForAug qPointsForAug:(NSMutableArray<XFWDouble *> * _Nullable)qPointsForAug pPointsForAug:(NSMutableArray<XFWDouble *> * _Nullable)pPointsForAug tPointsForAug:(NSMutableArray<XFWDouble *> * _Nullable)tPointsForAug __attribute__((swift_name("process(rPointsForAug:sPointsForAug:qPointsForAug:pPointsForAug:tPointsForAug:)")));
@@ -1141,7 +1141,7 @@ __attribute__((swift_name("Filters")))
 - (double)meanList:(XFWKotlinDoubleArray *)list __attribute__((swift_name("mean(list:)")));
 - (double)meanList_:(NSMutableArray<XFWDouble *> *)list __attribute__((swift_name("mean(list_:)")));
 - (XFWKotlinDoubleArray *)movingAverageSignal:(XFWKotlinDoubleArray *)signal __attribute__((swift_name("movingAverage(signal:)")));
-- (NSMutableArray<XFWDouble *> *)movingAverageSignal_:(NSMutableArray<XFWDouble *> *)signal __attribute__((swift_name("movingAverage(signal_:)")));
+- (NSMutableArray<XFWDouble *> *)movingAverageSignal_:(NSArray<XFWDouble *> *)signal __attribute__((swift_name("movingAverage(signal_:)")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
