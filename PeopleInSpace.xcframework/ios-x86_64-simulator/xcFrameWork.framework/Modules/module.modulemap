@@ -1,0 +1,6 @@
+framework module xcFrameWork {
+    umbrella header "xcFrameWork.h"
+
+    export *
+    module * { export * }
+}
