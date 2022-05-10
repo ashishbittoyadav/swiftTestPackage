@@ -6,7 +6,7 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSValue.h>
 
-@class XFWEcgConclusionCompanion, XFWEcgConclusion, XFWHrvConclusionCompanion, XFWHrvConclusion, XFWLeadTwoConclusionCompanion, XFWLeadTwoConclusion, XFWSevenLeadConclusionCompanion, XFWSevenLeadConclusion, XFWRisk, XFWTwelveLeadConclusionCompanion, XFWTwelveLeadConclusion, XFWEcgCharacteristicsCompanion, XFWEcgCharacteristics, XFWProcessorType, XFWEcgData, XFWEcgProcessorCompanion, XFWEcgProcessorResult, XFWAugmentedLeadGenerator, XFWEcgProcessorResultCompanion, XFWEcgDataCompanion, XFWHrvDataCompanion, XFWHrvData, XFWHrvHelperCompanion, XFWHrvPerMinuteData, XFWLeadTwoDataCompanion, XFWLeadTwoData, XFWSevenLeadDataCompanion, XFWSevenLeadData, XFWTwelveLeadDataCompanion, XFWTwelveLeadData, XFWImageDataCompanion, XFWImageData, XFWHrvImageDataCompanion, XFWHrvImageData, XFWLeadTwoImageDataCompanion, XFWLeadTwoImageData, XFWSevenLeadImageDataCompanion, XFWSevenLeadImageData, XFWTwelveLeadImageDataCompanion, XFWTwelveLeadImageData, XFWBiPhasicTPointsData, XFWAlgo2022Companion, XFWKotlinDoubleArray, XFWKotlinIntArray, XFWFFT, XFWArrhythmiaCompanion, XFWTrapezoidal, XFWArrhythmiaDiseases, XFWArrhythmiaDiseasesECGAbnormality, XFWArrhythmiaDiseasesECGDisease, XFWArrhythmiaDiseasesQRSType, XFWAugmentedLeadGeneratorCompanion, XFWBaseLineWanderingCompanion, XFWECGProcessingCompanion, XFWFFTComputation, XFWFilters, XFWHRVCompanion, XFWReSampler, XFWRespirationCompanion, XFWKotlinEnumCompanion, XFWKotlinEnum<E>, XFWKotlinArray<T>, XFWTwelveLeadDetectionEcgPosition, XFWGender, XFWHeartRiskAssessmentResult, XFWRecommendations, XFWDietRecommendation, XFWDrugRecommendation, XFWRelation, XFWRiskLevel, XFWRisk_, XFWMatrices, XFWKotlinDoubleIterator, XFWKotlinIntIterator, XFWKotlinThrowable, XFWKotlinx_serialization_coreSerializersModule, XFWKotlinx_serialization_coreSerialKind, XFWKotlinNothing;
+@class XFWEcgConclusionCompanion, XFWEcgConclusion, XFWHrvConclusionCompanion, XFWHrvConclusion, XFWLeadTwoConclusionCompanion, XFWLeadTwoConclusion, XFWSevenLeadConclusionCompanion, XFWSevenLeadConclusion, XFWRisk, XFWTwelveLeadConclusionCompanion, XFWTwelveLeadConclusion, XFWEcgCharacteristicsCompanion, XFWEcgCharacteristics, XFWProcessorType, XFWEcgData, XFWEcgProcessorCompanion, XFWEcgProcessorResult, XFWAugmentedLeadGenerator, XFWEcgProcessorResultCompanion, XFWReferenceSignal, XFWEcgDataCompanion, XFWHrvDataCompanion, XFWHrvData, XFWHrvHelperCompanion, XFWHrvPerMinuteData, XFWLeadTwoDataCompanion, XFWLeadTwoData, XFWSevenLeadDataCompanion, XFWSevenLeadData, XFWTwelveLeadDataCompanion, XFWTwelveLeadData, XFWImageDataCompanion, XFWImageData, XFWHrvImageDataCompanion, XFWHrvImageData, XFWLeadTwoImageDataCompanion, XFWLeadTwoImageData, XFWSevenLeadImageDataCompanion, XFWSevenLeadImageData, XFWTwelveLeadImageDataCompanion, XFWTwelveLeadImageData, XFWBiPhasicTPointsData, XFWAlgo2022Companion, XFWKotlinDoubleArray, XFWKotlinIntArray, XFWFFT, XFWArrhythmiaCompanion, XFWTrapezoidal, XFWArrhythmiaDiseases, XFWArrhythmiaDiseasesECGAbnormality, XFWArrhythmiaDiseasesECGDisease, XFWArrhythmiaDiseasesQRSType, XFWAugmentedLeadGeneratorCompanion, XFWBaseLineWanderingCompanion, XFWECGProcessingCompanion, XFWFFTComputation, XFWFilters, XFWHRVCompanion, XFWReSampler, XFWRespirationCompanion, XFWKotlinEnumCompanion, XFWKotlinEnum<E>, XFWKotlinArray<T>, XFWTwelveLeadDetectionEcgPosition, XFWGender, XFWHeartRiskAssessmentResult, XFWRecommendations, XFWDietRecommendation, XFWDrugRecommendation, XFWRelation, XFWRiskLevel, XFWRisk_, XFWMatrices, XFWKotlinDoubleIterator, XFWKotlinIntIterator, XFWKotlinThrowable, XFWKotlinx_serialization_coreSerializersModule, XFWKotlinx_serialization_coreSerialKind, XFWKotlinNothing;
 
 @protocol XFWKotlinx_serialization_coreKSerializer, XFWKotlinComparable, XFWKotlinx_serialization_coreEncoder, XFWKotlinx_serialization_coreSerialDescriptor, XFWKotlinx_serialization_coreSerializationStrategy, XFWKotlinx_serialization_coreDecoder, XFWKotlinx_serialization_coreDeserializationStrategy, XFWKotlinIterator, XFWKotlinx_serialization_coreCompositeEncoder, XFWKotlinAnnotation, XFWKotlinx_serialization_coreCompositeDecoder, XFWKotlinx_serialization_coreSerializersModuleCollector, XFWKotlinKClass, XFWKotlinKDeclarationContainer, XFWKotlinKAnnotatedElement, XFWKotlinKClassifier;
 
@@ -159,14 +159,6 @@ __attribute__((swift_name("Platform")))
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 @property (readonly) NSString *platform __attribute__((swift_name("platform")));
 @property (readonly) NSString *someRandomData __attribute__((swift_name("someRandomData")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("ReferenceSignalHelper")))
-@interface XFWReferenceSignalHelper : XFWBase
-- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
-+ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
-@property (readonly) NSMutableArray<XFWDouble *> *referenceSignal __attribute__((swift_name("referenceSignal")));
 @end;
 
 __attribute__((swift_name("EcgConclusion")))
@@ -465,6 +457,16 @@ __attribute__((swift_name("EcgProcessorResult.Companion")))
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) XFWEcgProcessorResultCompanion *shared __attribute__((swift_name("shared")));
 - (id<XFWKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ReferenceSignal")))
+@interface XFWReferenceSignal : XFWBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)referenceSignal __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) XFWReferenceSignal *shared __attribute__((swift_name("shared")));
+@property (readonly) NSMutableArray<XFWDouble *> *referenceSignal __attribute__((swift_name("referenceSignal")));
 @end;
 
 __attribute__((swift_name("EcgData")))
