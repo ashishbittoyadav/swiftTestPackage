@@ -421,7 +421,7 @@ __attribute__((swift_name("EcgProcessor")))
 @interface XFWEcgProcessor : XFWBase
 - (instancetype)initWithEcgType:(XFWProcessorType *)ecgType ecgData:(XFWEcgData *)ecgData applyFilter:(BOOL)applyFilter adjustRPeaks:(BOOL)adjustRPeaks __attribute__((swift_name("init(ecgType:ecgData:applyFilter:adjustRPeaks:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) XFWEcgProcessorCompanion *companion __attribute__((swift_name("companion")));
-- (XFWEcgProcessorResult *)processAugmentedLeadGenerator:(XFWAugmentedLeadGenerator * _Nullable)augmentedLeadGenerator age:(int32_t)age data:(NSMutableArray<XFWDouble *> *)data __attribute__((swift_name("process(augmentedLeadGenerator:age:data:)")));
+- (XFWEcgProcessorResult *)processAugmentedLeadGenerator:(XFWAugmentedLeadGenerator * _Nullable)augmentedLeadGenerator age:(int32_t)age data:(NSArray<XFWDouble *> *)data __attribute__((swift_name("process(augmentedLeadGenerator:age:data:)")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
