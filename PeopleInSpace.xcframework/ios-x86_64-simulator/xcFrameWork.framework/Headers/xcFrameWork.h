@@ -489,18 +489,18 @@ __attribute__((swift_name("EcgData.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("HrvData")))
 @interface XFWHrvData : XFWEcgData
-- (instancetype)initWithFiveMinuteData:(NSMutableArray<XFWDouble *> *)fiveMinuteData fftData:(NSMutableArray<XFWDouble *> *)fftData __attribute__((swift_name("init(fiveMinuteData:fftData:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithFiveMinuteData:(NSArray<XFWDouble *> *)fiveMinuteData fftData:(NSArray<XFWDouble *> *)fftData __attribute__((swift_name("init(fiveMinuteData:fftData:)"))) __attribute__((objc_designated_initializer));
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
 + (instancetype)new __attribute__((unavailable));
 @property (class, readonly, getter=companion) XFWHrvDataCompanion *companion __attribute__((swift_name("companion")));
-- (NSMutableArray<XFWDouble *> *)component1 __attribute__((swift_name("component1()")));
-- (NSMutableArray<XFWDouble *> *)component2 __attribute__((swift_name("component2()")));
-- (XFWHrvData *)doCopyFiveMinuteData:(NSMutableArray<XFWDouble *> *)fiveMinuteData fftData:(NSMutableArray<XFWDouble *> *)fftData __attribute__((swift_name("doCopy(fiveMinuteData:fftData:)")));
+- (NSArray<XFWDouble *> *)component1 __attribute__((swift_name("component1()")));
+- (NSArray<XFWDouble *> *)component2 __attribute__((swift_name("component2()")));
+- (XFWHrvData *)doCopyFiveMinuteData:(NSArray<XFWDouble *> *)fiveMinuteData fftData:(NSArray<XFWDouble *> *)fftData __attribute__((swift_name("doCopy(fiveMinuteData:fftData:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
-@property NSMutableArray<XFWDouble *> *fftData __attribute__((swift_name("fftData")));
-@property NSMutableArray<XFWDouble *> *fiveMinuteData __attribute__((swift_name("fiveMinuteData")));
+@property NSArray<XFWDouble *> *fftData __attribute__((swift_name("fftData")));
+@property NSArray<XFWDouble *> *fiveMinuteData __attribute__((swift_name("fiveMinuteData")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
@@ -528,7 +528,7 @@ __attribute__((swift_name("HrvHelper.Companion")))
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) XFWHrvHelperCompanion *shared __attribute__((swift_name("shared")));
-- (XFWHrvPerMinuteData *)getPerMinuteDataFromHrvFullDataList:(NSMutableArray<XFWDouble *> *)list __attribute__((swift_name("getPerMinuteDataFromHrvFullData(list:)")));
+- (XFWHrvPerMinuteData *)getPerMinuteDataFromHrvFullDataList:(NSArray<XFWDouble *> *)list __attribute__((swift_name("getPerMinuteDataFromHrvFullData(list:)")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
@@ -579,28 +579,28 @@ __attribute__((swift_name("LeadTwoData.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("SevenLeadData")))
 @interface XFWSevenLeadData : XFWEcgData
-- (instancetype)initWithV1Data:(NSMutableArray<XFWDouble *> *)v1Data v2Data:(NSMutableArray<XFWDouble *> *)v2Data v3Data:(NSMutableArray<XFWDouble *> *)v3Data v4Data:(NSMutableArray<XFWDouble *> *)v4Data v5Data:(NSMutableArray<XFWDouble *> *)v5Data v6Data:(NSMutableArray<XFWDouble *> *)v6Data lead2Data:(NSMutableArray<XFWDouble *> *)lead2Data __attribute__((swift_name("init(v1Data:v2Data:v3Data:v4Data:v5Data:v6Data:lead2Data:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithV1Data:(NSArray<XFWDouble *> *)v1Data v2Data:(NSArray<XFWDouble *> *)v2Data v3Data:(NSArray<XFWDouble *> *)v3Data v4Data:(NSArray<XFWDouble *> *)v4Data v5Data:(NSArray<XFWDouble *> *)v5Data v6Data:(NSArray<XFWDouble *> *)v6Data lead2Data:(NSArray<XFWDouble *> *)lead2Data __attribute__((swift_name("init(v1Data:v2Data:v3Data:v4Data:v5Data:v6Data:lead2Data:)"))) __attribute__((objc_designated_initializer));
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
 + (instancetype)new __attribute__((unavailable));
 @property (class, readonly, getter=companion) XFWSevenLeadDataCompanion *companion __attribute__((swift_name("companion")));
-- (NSMutableArray<XFWDouble *> *)component1 __attribute__((swift_name("component1()")));
-- (NSMutableArray<XFWDouble *> *)component2 __attribute__((swift_name("component2()")));
-- (NSMutableArray<XFWDouble *> *)component3 __attribute__((swift_name("component3()")));
-- (NSMutableArray<XFWDouble *> *)component4 __attribute__((swift_name("component4()")));
-- (NSMutableArray<XFWDouble *> *)component5 __attribute__((swift_name("component5()")));
-- (NSMutableArray<XFWDouble *> *)component6 __attribute__((swift_name("component6()")));
-- (NSMutableArray<XFWDouble *> *)component7 __attribute__((swift_name("component7()")));
-- (XFWSevenLeadData *)doCopyV1Data:(NSMutableArray<XFWDouble *> *)v1Data v2Data:(NSMutableArray<XFWDouble *> *)v2Data v3Data:(NSMutableArray<XFWDouble *> *)v3Data v4Data:(NSMutableArray<XFWDouble *> *)v4Data v5Data:(NSMutableArray<XFWDouble *> *)v5Data v6Data:(NSMutableArray<XFWDouble *> *)v6Data lead2Data:(NSMutableArray<XFWDouble *> *)lead2Data __attribute__((swift_name("doCopy(v1Data:v2Data:v3Data:v4Data:v5Data:v6Data:lead2Data:)")));
+- (NSArray<XFWDouble *> *)component1 __attribute__((swift_name("component1()")));
+- (NSArray<XFWDouble *> *)component2 __attribute__((swift_name("component2()")));
+- (NSArray<XFWDouble *> *)component3 __attribute__((swift_name("component3()")));
+- (NSArray<XFWDouble *> *)component4 __attribute__((swift_name("component4()")));
+- (NSArray<XFWDouble *> *)component5 __attribute__((swift_name("component5()")));
+- (NSArray<XFWDouble *> *)component6 __attribute__((swift_name("component6()")));
+- (NSArray<XFWDouble *> *)component7 __attribute__((swift_name("component7()")));
+- (XFWSevenLeadData *)doCopyV1Data:(NSArray<XFWDouble *> *)v1Data v2Data:(NSArray<XFWDouble *> *)v2Data v3Data:(NSArray<XFWDouble *> *)v3Data v4Data:(NSArray<XFWDouble *> *)v4Data v5Data:(NSArray<XFWDouble *> *)v5Data v6Data:(NSArray<XFWDouble *> *)v6Data lead2Data:(NSArray<XFWDouble *> *)lead2Data __attribute__((swift_name("doCopy(v1Data:v2Data:v3Data:v4Data:v5Data:v6Data:lead2Data:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
-@property NSMutableArray<XFWDouble *> *lead2Data __attribute__((swift_name("lead2Data")));
-@property NSMutableArray<XFWDouble *> *v1Data __attribute__((swift_name("v1Data")));
-@property NSMutableArray<XFWDouble *> *v2Data __attribute__((swift_name("v2Data")));
-@property NSMutableArray<XFWDouble *> *v3Data __attribute__((swift_name("v3Data")));
-@property NSMutableArray<XFWDouble *> *v4Data __attribute__((swift_name("v4Data")));
-@property NSMutableArray<XFWDouble *> *v5Data __attribute__((swift_name("v5Data")));
-@property NSMutableArray<XFWDouble *> *v6Data __attribute__((swift_name("v6Data")));
+@property NSArray<XFWDouble *> *lead2Data __attribute__((swift_name("lead2Data")));
+@property NSArray<XFWDouble *> *v1Data __attribute__((swift_name("v1Data")));
+@property NSArray<XFWDouble *> *v2Data __attribute__((swift_name("v2Data")));
+@property NSArray<XFWDouble *> *v3Data __attribute__((swift_name("v3Data")));
+@property NSArray<XFWDouble *> *v4Data __attribute__((swift_name("v4Data")));
+@property NSArray<XFWDouble *> *v5Data __attribute__((swift_name("v5Data")));
+@property NSArray<XFWDouble *> *v6Data __attribute__((swift_name("v6Data")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
@@ -616,38 +616,38 @@ __attribute__((swift_name("SevenLeadData.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("TwelveLeadData")))
 @interface XFWTwelveLeadData : XFWEcgData
-- (instancetype)initWithV1Data:(NSMutableArray<XFWDouble *> *)v1Data v2Data:(NSMutableArray<XFWDouble *> *)v2Data v3Data:(NSMutableArray<XFWDouble *> *)v3Data v4Data:(NSMutableArray<XFWDouble *> *)v4Data v5Data:(NSMutableArray<XFWDouble *> *)v5Data v6Data:(NSMutableArray<XFWDouble *> *)v6Data lead1Data:(NSMutableArray<XFWDouble *> *)lead1Data lead2Data:(NSMutableArray<XFWDouble *> *)lead2Data lead3Data:(NSMutableArray<XFWDouble *> *)lead3Data avlData:(NSMutableArray<XFWDouble *> *)avlData avrData:(NSMutableArray<XFWDouble *> *)avrData avfData:(NSMutableArray<XFWDouble *> *)avfData __attribute__((swift_name("init(v1Data:v2Data:v3Data:v4Data:v5Data:v6Data:lead1Data:lead2Data:lead3Data:avlData:avrData:avfData:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithV1Data:(NSArray<XFWDouble *> *)v1Data v2Data:(NSArray<XFWDouble *> *)v2Data v3Data:(NSArray<XFWDouble *> *)v3Data v4Data:(NSArray<XFWDouble *> *)v4Data v5Data:(NSArray<XFWDouble *> *)v5Data v6Data:(NSArray<XFWDouble *> *)v6Data lead1Data:(NSArray<XFWDouble *> *)lead1Data lead2Data:(NSArray<XFWDouble *> *)lead2Data lead3Data:(NSArray<XFWDouble *> *)lead3Data avlData:(NSArray<XFWDouble *> *)avlData avrData:(NSArray<XFWDouble *> *)avrData avfData:(NSArray<XFWDouble *> *)avfData __attribute__((swift_name("init(v1Data:v2Data:v3Data:v4Data:v5Data:v6Data:lead1Data:lead2Data:lead3Data:avlData:avrData:avfData:)"))) __attribute__((objc_designated_initializer));
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
 + (instancetype)new __attribute__((unavailable));
 @property (class, readonly, getter=companion) XFWTwelveLeadDataCompanion *companion __attribute__((swift_name("companion")));
-- (NSMutableArray<XFWDouble *> *)component1 __attribute__((swift_name("component1()")));
-- (NSMutableArray<XFWDouble *> *)component10 __attribute__((swift_name("component10()")));
-- (NSMutableArray<XFWDouble *> *)component11 __attribute__((swift_name("component11()")));
-- (NSMutableArray<XFWDouble *> *)component12 __attribute__((swift_name("component12()")));
-- (NSMutableArray<XFWDouble *> *)component2 __attribute__((swift_name("component2()")));
-- (NSMutableArray<XFWDouble *> *)component3 __attribute__((swift_name("component3()")));
-- (NSMutableArray<XFWDouble *> *)component4 __attribute__((swift_name("component4()")));
-- (NSMutableArray<XFWDouble *> *)component5 __attribute__((swift_name("component5()")));
-- (NSMutableArray<XFWDouble *> *)component6 __attribute__((swift_name("component6()")));
-- (NSMutableArray<XFWDouble *> *)component7 __attribute__((swift_name("component7()")));
-- (NSMutableArray<XFWDouble *> *)component8 __attribute__((swift_name("component8()")));
-- (NSMutableArray<XFWDouble *> *)component9 __attribute__((swift_name("component9()")));
-- (XFWTwelveLeadData *)doCopyV1Data:(NSMutableArray<XFWDouble *> *)v1Data v2Data:(NSMutableArray<XFWDouble *> *)v2Data v3Data:(NSMutableArray<XFWDouble *> *)v3Data v4Data:(NSMutableArray<XFWDouble *> *)v4Data v5Data:(NSMutableArray<XFWDouble *> *)v5Data v6Data:(NSMutableArray<XFWDouble *> *)v6Data lead1Data:(NSMutableArray<XFWDouble *> *)lead1Data lead2Data:(NSMutableArray<XFWDouble *> *)lead2Data lead3Data:(NSMutableArray<XFWDouble *> *)lead3Data avlData:(NSMutableArray<XFWDouble *> *)avlData avrData:(NSMutableArray<XFWDouble *> *)avrData avfData:(NSMutableArray<XFWDouble *> *)avfData __attribute__((swift_name("doCopy(v1Data:v2Data:v3Data:v4Data:v5Data:v6Data:lead1Data:lead2Data:lead3Data:avlData:avrData:avfData:)")));
+- (NSArray<XFWDouble *> *)component1 __attribute__((swift_name("component1()")));
+- (NSArray<XFWDouble *> *)component10 __attribute__((swift_name("component10()")));
+- (NSArray<XFWDouble *> *)component11 __attribute__((swift_name("component11()")));
+- (NSArray<XFWDouble *> *)component12 __attribute__((swift_name("component12()")));
+- (NSArray<XFWDouble *> *)component2 __attribute__((swift_name("component2()")));
+- (NSArray<XFWDouble *> *)component3 __attribute__((swift_name("component3()")));
+- (NSArray<XFWDouble *> *)component4 __attribute__((swift_name("component4()")));
+- (NSArray<XFWDouble *> *)component5 __attribute__((swift_name("component5()")));
+- (NSArray<XFWDouble *> *)component6 __attribute__((swift_name("component6()")));
+- (NSArray<XFWDouble *> *)component7 __attribute__((swift_name("component7()")));
+- (NSArray<XFWDouble *> *)component8 __attribute__((swift_name("component8()")));
+- (NSArray<XFWDouble *> *)component9 __attribute__((swift_name("component9()")));
+- (XFWTwelveLeadData *)doCopyV1Data:(NSArray<XFWDouble *> *)v1Data v2Data:(NSArray<XFWDouble *> *)v2Data v3Data:(NSArray<XFWDouble *> *)v3Data v4Data:(NSArray<XFWDouble *> *)v4Data v5Data:(NSArray<XFWDouble *> *)v5Data v6Data:(NSArray<XFWDouble *> *)v6Data lead1Data:(NSArray<XFWDouble *> *)lead1Data lead2Data:(NSArray<XFWDouble *> *)lead2Data lead3Data:(NSArray<XFWDouble *> *)lead3Data avlData:(NSArray<XFWDouble *> *)avlData avrData:(NSArray<XFWDouble *> *)avrData avfData:(NSArray<XFWDouble *> *)avfData __attribute__((swift_name("doCopy(v1Data:v2Data:v3Data:v4Data:v5Data:v6Data:lead1Data:lead2Data:lead3Data:avlData:avrData:avfData:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
-@property NSMutableArray<XFWDouble *> *avfData __attribute__((swift_name("avfData")));
-@property NSMutableArray<XFWDouble *> *avlData __attribute__((swift_name("avlData")));
-@property NSMutableArray<XFWDouble *> *avrData __attribute__((swift_name("avrData")));
-@property NSMutableArray<XFWDouble *> *lead1Data __attribute__((swift_name("lead1Data")));
-@property NSMutableArray<XFWDouble *> *lead2Data __attribute__((swift_name("lead2Data")));
-@property NSMutableArray<XFWDouble *> *lead3Data __attribute__((swift_name("lead3Data")));
-@property NSMutableArray<XFWDouble *> *v1Data __attribute__((swift_name("v1Data")));
-@property NSMutableArray<XFWDouble *> *v2Data __attribute__((swift_name("v2Data")));
-@property NSMutableArray<XFWDouble *> *v3Data __attribute__((swift_name("v3Data")));
-@property NSMutableArray<XFWDouble *> *v4Data __attribute__((swift_name("v4Data")));
-@property NSMutableArray<XFWDouble *> *v5Data __attribute__((swift_name("v5Data")));
-@property NSMutableArray<XFWDouble *> *v6Data __attribute__((swift_name("v6Data")));
+@property NSArray<XFWDouble *> *avfData __attribute__((swift_name("avfData")));
+@property NSArray<XFWDouble *> *avlData __attribute__((swift_name("avlData")));
+@property NSArray<XFWDouble *> *avrData __attribute__((swift_name("avrData")));
+@property NSArray<XFWDouble *> *lead1Data __attribute__((swift_name("lead1Data")));
+@property NSArray<XFWDouble *> *lead2Data __attribute__((swift_name("lead2Data")));
+@property NSArray<XFWDouble *> *lead3Data __attribute__((swift_name("lead3Data")));
+@property NSArray<XFWDouble *> *v1Data __attribute__((swift_name("v1Data")));
+@property NSArray<XFWDouble *> *v2Data __attribute__((swift_name("v2Data")));
+@property NSArray<XFWDouble *> *v3Data __attribute__((swift_name("v3Data")));
+@property NSArray<XFWDouble *> *v4Data __attribute__((swift_name("v4Data")));
+@property NSArray<XFWDouble *> *v5Data __attribute__((swift_name("v5Data")));
+@property NSArray<XFWDouble *> *v6Data __attribute__((swift_name("v6Data")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
@@ -1035,10 +1035,10 @@ __attribute__((swift_name("Butterworth")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("ECGProcessing")))
 @interface XFWECGProcessing : XFWBase
-- (instancetype)initWithEcgPoints:(NSArray<XFWDouble *> *)ecgPoints leadPosition:(int32_t)leadPosition applyFilter:(BOOL)applyFilter adjustRPeaks:(BOOL)adjustRPeaks ecgPointsForAugmentedLead:(NSMutableArray<XFWDouble *> * _Nullable)ecgPointsForAugmentedLead __attribute__((swift_name("init(ecgPoints:leadPosition:applyFilter:adjustRPeaks:ecgPointsForAugmentedLead:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithEcgPoints:(NSArray<XFWDouble *> *)ecgPoints leadPosition:(int32_t)leadPosition applyFilter:(BOOL)applyFilter adjustRPeaks:(BOOL)adjustRPeaks ecgPointsForAugmentedLead:(NSArray<XFWDouble *> * _Nullable)ecgPointsForAugmentedLead __attribute__((swift_name("init(ecgPoints:leadPosition:applyFilter:adjustRPeaks:ecgPointsForAugmentedLead:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) XFWECGProcessingCompanion *companion __attribute__((swift_name("companion")));
 - (NSMutableArray<XFWDouble *> *)adjustRPeaksSignalOnConsideration:(NSMutableArray<XFWDouble *> *)signalOnConsideration seudoPoint:(NSMutableArray<XFWDouble *> *)seudoPoint __attribute__((swift_name("adjustRPeaks(signalOnConsideration:seudoPoint:)")));
-- (double)calculateAugmentedSTElevationQrsStop:(NSMutableArray<XFWDouble *> *)qrsStop prStopIndices:(NSMutableArray<XFWDouble *> * _Nullable)prStopIndices augmentedSignalData:(NSMutableArray<XFWDouble *> *)augmentedSignalData __attribute__((swift_name("calculateAugmentedSTElevation(qrsStop:prStopIndices:augmentedSignalData:)")));
+- (double)calculateAugmentedSTElevationQrsStop:(NSMutableArray<XFWDouble *> *)qrsStop prStopIndices:(NSMutableArray<XFWDouble *> * _Nullable)prStopIndices augmentedSignalData:(NSArray<XFWDouble *> *)augmentedSignalData __attribute__((swift_name("calculateAugmentedSTElevation(qrsStop:prStopIndices:augmentedSignalData:)")));
 - (NSMutableArray<XFWDouble *> *)calculateRPointsSignal:(NSArray<XFWDouble *> *)signal __attribute__((swift_name("calculateRPoints(signal:)")));
 - (XFWEcgCharacteristics *)featuresRPeaks:(NSMutableArray<XFWDouble *> *)rPeaks pPointIndices:(NSMutableArray<XFWDouble *> *)pPointIndices qPointIndices:(NSMutableArray<XFWDouble *> *)qPointIndices sPointIndices:(NSMutableArray<XFWDouble *> *)sPointIndices tPointIndices:(NSMutableArray<XFWDouble *> *)tPointIndices __attribute__((swift_name("features(rPeaks:pPointIndices:qPointIndices:sPointIndices:tPointIndices:)")));
 - (NSMutableArray<XFWDouble *> *)maxMinSignal:(NSMutableArray<XFWDouble *> *)signal points:(NSMutableArray<XFWDouble *> *)points key:(int32_t)key __attribute__((swift_name("maxMin(signal:points:key:)")));
@@ -1192,7 +1192,7 @@ __attribute__((swift_name("ReSampler")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Respiration")))
 @interface XFWRespiration : XFWBase
-- (instancetype)initWithEcgPoints:(NSMutableArray<XFWDouble *> *)ecgPoints __attribute__((swift_name("init(ecgPoints:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithEcgPoints:(NSArray<XFWDouble *> *)ecgPoints __attribute__((swift_name("init(ecgPoints:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) XFWRespirationCompanion *companion __attribute__((swift_name("companion")));
 - (void)process __attribute__((swift_name("process()")));
 @property (readonly) float bpm __attribute__((swift_name("bpm")));
@@ -1206,7 +1206,7 @@ __attribute__((swift_name("Respiration.Companion")))
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) XFWRespirationCompanion *shared __attribute__((swift_name("shared")));
 - (XFWKotlinDoubleArray *)extensionArray:(XFWKotlinDoubleArray *)array var:(int32_t)var __attribute__((swift_name("extension(array:var:)")));
-- (XFWKotlinDoubleArray *)interpolateSignal:(NSMutableArray<XFWDouble *> *)signal x:(XFWKotlinDoubleArray *)x t:(XFWKotlinIntArray *)t __attribute__((swift_name("interpolate(signal:x:t:)")));
+- (XFWKotlinDoubleArray *)interpolateSignal:(NSArray<XFWDouble *> *)signal x:(XFWKotlinDoubleArray *)x t:(XFWKotlinIntArray *)t __attribute__((swift_name("interpolate(signal:x:t:)")));
 - (XFWKotlinDoubleArray *)movingAverageArray:(XFWKotlinDoubleArray *)array var1:(int32_t)var1 var2:(int32_t)var2 var3:(int32_t)var3 __attribute__((swift_name("movingAverage(array:var1:var2:var3:)")));
 - (double)sortMPass:(XFWKotlinDoubleArray *)Pass __attribute__((swift_name("sortM(Pass:)")));
 - (int32_t)sortTPass:(XFWKotlinDoubleArray *)Pass Pass_T:(XFWKotlinIntArray *)Pass_T __attribute__((swift_name("sortT(Pass:Pass_T:)")));
@@ -1266,7 +1266,7 @@ __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("TwelveLeadDetection")))
 @interface XFWTwelveLeadDetection : XFWBase
 - (instancetype)initWithTwelveLeadEcgCharacteristics:(NSMutableArray<id> *)twelveLeadEcgCharacteristics twelveLeadData:(XFWTwelveLeadData *)twelveLeadData __attribute__((swift_name("init(twelveLeadEcgCharacteristics:twelveLeadData:)"))) __attribute__((objc_designated_initializer));
-- (XFWBiPhasicTPointsData *)calculateBiPhasicTPointsPrStart:(NSMutableArray<XFWDouble *> *)prStart signal:(NSMutableArray<XFWDouble *> *)signal tPoints:(NSMutableArray<XFWDouble *> *)tPoints qPoints:(NSMutableArray<XFWDouble *> *)qPoints rPeakPoints:(NSMutableArray<XFWDouble *> *)rPeakPoints leadPosition:(int32_t)leadPosition __attribute__((swift_name("calculateBiPhasicTPoints(prStart:signal:tPoints:qPoints:rPeakPoints:leadPosition:)")));
+- (XFWBiPhasicTPointsData *)calculateBiPhasicTPointsPrStart:(NSMutableArray<XFWDouble *> *)prStart signal:(NSArray<XFWDouble *> *)signal tPoints:(NSMutableArray<XFWDouble *> *)tPoints qPoints:(NSMutableArray<XFWDouble *> *)qPoints rPeakPoints:(NSMutableArray<XFWDouble *> *)rPeakPoints leadPosition:(int32_t)leadPosition __attribute__((swift_name("calculateBiPhasicTPoints(prStart:signal:tPoints:qPoints:rPeakPoints:leadPosition:)")));
 - (void)process __attribute__((swift_name("process()")));
 @property (readonly) NSString *anomalies __attribute__((swift_name("anomalies")));
 @property NSString *biPhasicTWaveString __attribute__((swift_name("biPhasicTWaveString")));
