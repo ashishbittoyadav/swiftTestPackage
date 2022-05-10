@@ -154,6 +154,7 @@ __attribute__((swift_name("Platform")))
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 @property (readonly) NSString *platform __attribute__((swift_name("platform")));
+@property (readonly) NSString *someRandomData __attribute__((swift_name("someRandomData")));
 @end;
 
 #pragma pop_macro("_Nullable_result")
