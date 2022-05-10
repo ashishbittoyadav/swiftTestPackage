@@ -1035,7 +1035,7 @@ __attribute__((swift_name("Butterworth")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("ECGProcessing")))
 @interface XFWECGProcessing : XFWBase
-- (instancetype)initWithEcgPoints:(NSMutableArray<XFWDouble *> *)ecgPoints leadPosition:(int32_t)leadPosition applyFilter:(BOOL)applyFilter adjustRPeaks:(BOOL)adjustRPeaks ecgPointsForAugmentedLead:(NSMutableArray<XFWDouble *> * _Nullable)ecgPointsForAugmentedLead __attribute__((swift_name("init(ecgPoints:leadPosition:applyFilter:adjustRPeaks:ecgPointsForAugmentedLead:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithEcgPoints:(NSMutableArray<XFWDouble *> *)ecgPoints leadPosition:(int32_t)leadPosition applyFilter:(BOOL)applyFilter adjustRPeaks:(BOOL)adjustRPeaks ecgPointsForAugmentedLead:(NSMutableArray<XFWDouble *> * _Nullable)ecgPointsForAugmentedLead data:(XFWKotlinDoubleArray *)data __attribute__((swift_name("init(ecgPoints:leadPosition:applyFilter:adjustRPeaks:ecgPointsForAugmentedLead:data:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) XFWECGProcessingCompanion *companion __attribute__((swift_name("companion")));
 - (NSMutableArray<XFWDouble *> *)adjustRPeaksSignalOnConsideration:(NSMutableArray<XFWDouble *> *)signalOnConsideration seudoPoint:(NSMutableArray<XFWDouble *> *)seudoPoint __attribute__((swift_name("adjustRPeaks(signalOnConsideration:seudoPoint:)")));
 - (double)calculateAugmentedSTElevationQrsStop:(NSMutableArray<XFWDouble *> *)qrsStop prStopIndices:(NSMutableArray<XFWDouble *> * _Nullable)prStopIndices augmentedSignalData:(NSMutableArray<XFWDouble *> *)augmentedSignalData __attribute__((swift_name("calculateAugmentedSTElevation(qrsStop:prStopIndices:augmentedSignalData:)")));
