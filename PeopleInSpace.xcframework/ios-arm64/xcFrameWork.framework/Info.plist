@@ -5,7 +5,7 @@
     <key>CFBundleExecutable</key>
     <string>xcFrameWork</string>
     <key>CFBundleIdentifier</key>
-    <string>xcFrameWork</string>
+    <string>com.example.xcframework.xcFrameWork</string>
     <key>CFBundleInfoDictionaryVersion</key>
     <string>6.0</string>
     <key>CFBundleName</key>
